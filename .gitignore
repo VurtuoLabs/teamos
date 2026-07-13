@@ -1,0 +1,60 @@
+# fdeOS .gitignore
+# Share the framework, NOT customer data
+
+# Customer project data - NEVER commit this
+customers/*/
+
+# Keep the customers directory structure, but empty
+!customers/.gitkeep
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Local testing/scratch files
+scratch/
+test-customer/
+*.draft.md
+*.local.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+.*.tmp
+
+# Environment variables (Google Drive/Slack integration credentials)
+.env
+.env.local
+.env.*.local
+
+# Claude Code local settings (machine-specific, never shared)
+.claude/settings.local.json

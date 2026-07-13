@@ -1,0 +1,146 @@
+# Agents Tracker - {{CUSTOMER_NAME}}
+
+This file tracks agent-level metadata for FDE engagement weekly tracker submissions. It serves as the single source of truth for stable agent information that doesn't change frequently.
+
+**Purpose**: Store persistent agent metadata to streamline weekly form submissions. Combined with change logs from `/project-sync`, this enables `/fde-tracker-submit` to auto-generate form-ready output.
+
+**Maintenance**: Update this file when agent details change (new agents, phase transitions, go-live dates, etc.). The `/project-sync` skill can help keep this updated from meeting notes and Slack messages.
+
+---
+
+## Account Information
+
+**Primary Slack Channel:**
+<!-- REQUIRED: The customer's main Slack channel for this engagement — whichever channel the customer wants used for updates and syncs. -->
+<!-- Format: Channel ID (e.g., C0AF28B0Z6V) or channel name (e.g., #customer-name-account-team) -->
+<!-- Example: C0AF28B0Z6V or #nuffield-health-account-team -->
+
+**Customer Executive Sponsor Name & Title:**
+<!-- Only update if changed from previous submission -->
+<!-- Example: Jane Smith, VP of Customer Experience -->
+
+**Number of Agents:** 0
+<!-- Total number of agents you're tracking for this customer -->
+
+**Features in Use:**
+<!-- Multi-select up to 6 items. Only update if changed from prior submission. -->
+<!-- Examples: Agent Script, Multi-turn conversations, Context variables, Voice integration, API integrations, Automated testing, Enhanced UI components, Prompt caching -->
+
+**Competitors:**
+<!-- Use N/A if not applicable -->
+
+---
+
+## Agent 1: [Agent Name / Use Case]
+
+**Agent Name / Use Case:**
+<!-- Example: Healthcare Appointment Booking Agent - Web/Text -->
+
+**Agent Type:**
+<!-- Select one:
+- Agentforce Assistant
+- Agentforce SDR
+- Agentforce Sales Coach
+- Agentforce Service Agent
+- Employee Agent
+- Slack Agent
+- Shopper Agent
+- Service Planner
+- Setup
+- Other
+-->
+
+**Current Phase:**
+<!-- Select one:
+- Ideate
+- Setup
+- Configure
+- Test
+- Deploy
+- Monitor
+- Consuming
+-->
+
+**Current Status:**
+<!-- Select one:
+- On Track (🟢)
+- Watch - Customer (🟡)
+- Watch - Product (🟡)
+- Watch - Both (🟡)
+- Blocked - Customer (🔴)
+- Blocked - Product (🔴)
+- Blocked - Both (🔴)
+-->
+
+**Go-Live Type:**
+<!-- Select one:
+- Pilot Release
+- GA Release
+- Post-GA Release
+-->
+
+**Expected Go-Live Date:**
+<!-- Format: YYYY-MM-DD or TBD -->
+
+**Actual Go-Live Date:**
+<!-- Format: YYYY-MM-DD or leave blank if not yet live -->
+
+**Forecasted Consumption for Release:**
+<!-- Forecasted actions per week once the new release is fully adopted by the user base -->
+<!-- Enter number or leave blank -->
+
+**Implementation Partner:**
+<!-- Example: Accenture, Deloitte, Mint Consulting -->
+<!-- Use N/A if not applicable -->
+
+**Customer Sentiment:**
+<!-- Select one:
+- Poor
+- Fair
+- Good
+-->
+
+**Notes:**
+<!-- Optional: Additional context about this agent that doesn't fit in other fields -->
+
+---
+
+## Agent 2: [Agent Name / Use Case]
+
+**Agent Name / Use Case:**
+
+**Agent Type:**
+
+**Current Phase:**
+
+**Current Status:**
+
+**Go-Live Type:**
+
+**Expected Go-Live Date:**
+
+**Actual Go-Live Date:**
+
+**Forecasted Consumption for Release:**
+
+**Implementation Partner:**
+
+**Customer Sentiment:**
+
+**Notes:**
+
+---
+
+<!-- Add more agent sections as needed by copying the template above -->
+
+---
+
+## Maintenance Notes
+
+**Last Updated:** {{DATE}}
+**Updated By:** {{YOUR_NAME}}
+
+**Change History:**
+- {{DATE}}: Initial creation
+- {{DATE}}: [Description of changes]
+

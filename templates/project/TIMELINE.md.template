@@ -1,0 +1,124 @@
+# Timeline & Milestones
+
+*Use narrative format to tell the story of the engagement. Dates alone don't capture context, decisions, and momentum.*
+
+---
+
+## Pre-Engagement Context
+
+[Describe what led to this engagement:
+- Customer background and history
+- What triggered this engagement?
+- Key conversations or events that shaped scope]
+
+---
+
+## Week 0: Engagement Setup ([Date Range])
+
+[Narrative about kickoff, team formation, access provisioning, alignment meetings]
+
+### [Specific Date]: [Event Name]
+[Detailed context about what happened, who was involved, key decisions made]
+
+**Key Outcomes**:
+- [Decision or milestone]
+- [Setup completion]
+- [Agreements reached]
+
+**Next Steps**:
+- [What came next]
+
+---
+
+## Week 1: [Phase Name] ([Date Range])
+
+[Narrative about the week's focus, challenges encountered, progress made]
+
+### [Specific Date]: [Event Name]
+[Context and details about significant events]
+
+**Technical Progress**:
+- [What was built or configured]
+- [Issues encountered]
+- [Decisions made]
+
+**Stakeholder Activity**:
+- [Meetings held]
+- [Alignment achieved or challenges]
+
+**Momentum Shifts**:
+- [What changed in direction or approach]
+- [Breakthroughs or setbacks]
+
+---
+
+## Week 2: [Phase Name] ([Date Range])
+
+[Continue narrative format...]
+
+### [Specific Date]: [Event Name]
+[Context and details]
+
+**Progress**:
+- [Achievements]
+- [Challenges]
+
+**Key Decisions**:
+- [What was decided and why]
+
+---
+
+## Critical Dates Reference
+
+Quick reference for key dates (details in narrative above):
+
+| Date | Event | Type | Status |
+|------|-------|------|--------|
+| [YYYY-MM-DD] | [Event name] | [Deadline/Demo/Review/Go-Live] | [✅/⏳/📅] |
+| [YYYY-MM-DD] | [Event name] | [Type] | [Status] |
+
+**Legend**: ✅ Complete | ⏳ In Progress | 📅 Upcoming
+
+---
+
+## Meeting Schedule
+
+### Recurring Meetings
+- **[Meeting Name]**: [Frequency] - [Day/Time] - [Attendees] - [Purpose]
+- **[Meeting Name]**: [Frequency] - [Day/Time] - [Attendees] - [Purpose]
+
+### Upcoming Key Meetings
+| Date | Meeting | Purpose | Attendees | Prep Needed |
+|------|---------|---------|-----------|-------------|
+| [YYYY-MM-DD] | [Meeting name] | [Purpose] | [Who] | [What to prepare] |
+
+---
+
+## Delivery Schedule
+
+| Deliverable | Due Date | Owner | Status | Dependencies | Notes |
+|-------------|----------|-------|--------|--------------|-------|
+| [Deliverable] | [YYYY-MM-DD] | [Name] | [Status] | [Blockers] | [Context] |
+
+---
+
+## Timeline Notes & Context
+
+### Dependencies
+[What external factors affect the timeline? Other teams, customer processes, platform releases?]
+
+### Risks
+[What could cause delays? How are we mitigating?]
+
+### Changes from Original Plan
+[How has the timeline evolved? What changed and why?]
+
+---
+
+## Template Guide
+
+**Narrative Structure**: Write week-by-week stories, not just date lists
+**Include Context**: Why did things happen? What were the circumstances?
+**Capture Decisions**: Major decisions belong here AND in LEARNINGS.md
+**Show Momentum**: Document breakthroughs, setbacks, and shifts in direction
+**Be Specific**: Names, dates, outcomes - make it useful for future reference

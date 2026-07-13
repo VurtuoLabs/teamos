@@ -1,0 +1,106 @@
+# [Customer Name] - [Engagement Type]
+
+## Engagement Overview
+
+**Customer**: [Customer Name]
+**Engagement Type**: [e.g., Proof of Concept, Implementation, Advisory]
+**Start Date**: [YYYY-MM-DD]
+**Target End Date**: [YYYY-MM-DD]
+**Status**: [Active/On Hold/Completed]
+
+## Strategic Context
+
+### Business Objectives
+- [Primary business goal or outcome]
+- [Why are we doing this engagement?]
+- [What business problem are we solving?]
+
+### Success Criteria
+What does "done" look like? Define measurable outcomes:
+- [ ] [Specific, measurable outcome 1]
+- [ ] [Specific, measurable outcome 2]
+- [ ] [Specific, measurable outcome 3]
+
+### Constraints
+Important limitations and boundaries:
+- **Timeline**: [Key dates and why they matter]
+- **Technical**: [Technical limitations or requirements]
+- **Organizational**: [Change management, training, resource constraints]
+- **Budget**: [If relevant]
+
+## Resources
+
+### Primary Slack Channel
+- **Channel**: [#channel-name or Channel ID]
+- **Purpose**: The customer's main Slack channel for this engagement — whichever channel the customer wants used for updates and syncs
+- **Link**: [Full Slack channel link]
+
+### Meeting Transcripts
+- **Google Drive Folder**: [Link to Google Drive folder]
+- **Location**: [Folder path or ID]
+- **Syncing**: Auto-fetch via `/project-sync` (last 7 days default)
+
+### Slack Channels (Other)
+- **Team Collaboration Channel**: [#channel-name or link]
+- **Technical Discussion Channel**: [if applicable]
+- **Product Team Channel**: [if applicable]
+
+### Documentation
+- **Project Drive**: [Link]
+- **Other Resources**: [Links]
+
+## Key Stakeholders
+
+See [STAKEHOLDERS.md](./STAKEHOLDERS.md) for full details.
+
+**Primary Contacts**:
+- **Customer Executive Sponsor**: [Name & Role]
+- **Technical Lead**: [Name & Role]
+- **Salesforce Account Team**: [Name & Role]
+- **FDE Team**: [Names & Roles]
+
+## Project Context
+
+[2-3 paragraphs describing:
+- Who is this customer and what do they do?
+- What is their current state/challenge?
+- Why is this engagement happening now?
+- What does success look like from their perspective?]
+
+## Technical Scope
+
+**In Scope**:
+- [Technology/feature 1]
+- [Technology/feature 2]
+- [Technology/feature 3]
+
+**Out of Scope**:
+- [What we're explicitly NOT doing - be clear about boundaries]
+- [What's deferred to future phases]
+- [What the customer will handle separately]
+
+## Key Decisions
+
+Track major strategic and technical decisions here. Full details in [LEARNINGS.md](./LEARNINGS.md).
+
+### [Decision Title]
+**Date**: [YYYY-MM-DD]
+**Decision**: [What was decided]
+**Rationale**: [Why this approach]
+**Impact**: [What this affects]
+
+---
+
+## Workflows
+
+### Project Sync Process
+To sync this project from Google Drive and Slack:
+1. Ensure you're in this project directory
+2. Say: "Sync the project" or use `/project-sync`
+3. Claude will automatically fetch recent updates and update tracking files
+
+### Weekly Updates
+[Describe your weekly update cadence, channels, and format]
+
+### Stakeholder Communication
+[Describe communication patterns and escalation paths]

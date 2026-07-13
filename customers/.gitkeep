@@ -1,0 +1,5 @@
+# This file keeps the customers/ directory in git
+# Actual customer projects are gitignored
+#
+# When you clone fdeOS, you get the empty directory structure
+# ready to add your own customer projects locally

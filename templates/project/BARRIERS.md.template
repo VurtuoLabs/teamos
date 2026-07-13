@@ -1,0 +1,128 @@
+# Barriers & Blockers
+
+*Track obstacles by product area for leadership reporting. Be specific about impact and next steps.*
+
+---
+
+## By Product Area
+
+### Einstein/AI
+*No current barriers*
+
+### Data Cloud
+*No current barriers*
+
+### Agentforce
+*No current barriers*
+
+### Platform/Core
+*No current barriers*
+
+### Integration/MuleSoft
+*No current barriers*
+
+### Other/General
+*No current barriers*
+
+---
+
+## Barrier Template
+
+When adding a barrier, use this format:
+
+**[PRIORITY]** Clear, specific description of the barrier (not just "X isn't working")
+- **Status**: [Open | In Progress | Blocked | Resolved]
+- **Owner**: [Who's responsible for resolution - name, not just team]
+- **Opened**: [YYYY-MM-DD]
+- **Resolved**: [YYYY-MM-DD - only if Status is Resolved]
+- **Impact**: [Be specific: What's blocked? Revenue at risk? Timeline delay? Customer frustration?]
+- **Next Steps**: [Concrete actions with owners and dates, not vague "following up"]
+- **Escalation Path**: [If applicable - who can unblock this?]
+- **Workaround**: [If applicable - temporary solution while resolving]
+
+**Priority Levels**:
+- **[BLOCKER]**: Stops all forward progress, needs immediate resolution
+- **[CRITICAL]**: Severely impacts timeline or success, needs resolution within days
+- **[HIGH]**: Significant impact but has workarounds, needs resolution within 1-2 weeks
+- **[MEDIUM]**: Inconvenient but not blocking, can wait for planned resolution
+- **[LOW]**: Minor impact, low priority
+
+---
+
+## Examples (Delete these when you add real barriers)
+
+### Agentforce
+**[HIGH]** Agent builder prevents parallel development - only one developer can deploy at a time
+- **Status**: In Progress
+- **Owner**: Brad Shapiro (escalated to Product Team)
+- **Opened**: 2026-03-10
+- **Impact**: Team of 3 developers must coordinate deployments sequentially, slowing iteration velocity by ~40%
+- **Next Steps**:
+  - Brad opened case with Agentforce PM (2026-03-10)
+  - Workaround: Using separate agent versions for parallel work
+  - Follow up on product roadmap timeline (2026-03-17)
+- **Escalation Path**: Product VP if no response by EOW
+- **Workaround**: Creating separate agent versions per developer (adds overhead but unblocks)
+
+### Data Cloud
+**[BLOCKER]** Production data sync failing with authentication errors
+- **Status**: Blocked
+- **Owner**: Amy Rodriguez (SA), escalated to Support
+- **Opened**: 2026-05-01
+- **Impact**: Demo scheduled for 2026-05-08 cannot proceed without production data. Customer executive attendance confirmed. Rescheduling would damage credibility and delay deal cycle by 2-4 weeks.
+- **Next Steps**:
+  - Support Case #12345 opened (Priority 1)
+  - Scheduled bridge call with Data Cloud engineering (2026-05-02 2pm)
+  - Customer notified of potential delay (2026-05-01)
+  - Backup plan: Use synthetic data if not resolved by 2026-05-06
+- **Escalation Path**: Account VP aware, will escalate to SVP if not resolved by 2026-05-03
+
+---
+
+## Resolved Barriers
+
+Track resolved barriers to show progress and capture resolution approaches:
+
+- ~~**[HIGH]** External API not returning appointment ID consistently~~
+  - **Status**: Resolved
+  - **Owner**: Brad Shapiro
+  - **Opened**: 2026-03-10
+  - **Resolved**: 2026-03-25
+  - **How Resolved**: Worked with customer's API team to add ID to response payload; deployed fix to production
+  - **Duration**: 15 days
+  - **Learning**: Always validate external API contracts during discovery phase
+
+- ~~**[BLOCKER]** 10% appointment booking failure rate blocking go-live~~
+  - **Status**: Resolved
+  - **Owner**: Brad Shapiro
+  - **Opened**: 2026-03-02
+  - **Resolved**: 2026-03-20
+  - **How Resolved**: Migrated from legacy builder to Agent Script for deterministic flow control
+  - **Duration**: 18 days (full rebuild)
+  - **Learning**: Mission-critical transactions require deterministic patterns, not purely LLM-based flows
+
+---
+
+## Barrier Management Tips
+
+1. **Be specific**: "API timeout" isn't useful. "Customer API timing out after 30sec on production (but not sandbox) when fetching >100 records" is actionable.
+
+2. **Quantify impact**: Don't say "delays timeline." Say "delays go-live by 1 week, risks $500K Q1 deal."
+
+3. **Assign owners**: Names, not teams. "Sarah Chen" not "Support Team."
+
+4. **Update status actively**:
+   - **Open**: Just identified, no work started
+   - **In Progress**: Actively being worked on
+   - **Blocked**: Work stalled, waiting on external dependency
+   - **Resolved**: Issue fixed, move to "Resolved Barriers" section
+
+5. **Track resolution time**: How long do barriers stay open? Pattern of slow resolution = escalation needed.
+
+6. **Update regularly**: Stale barriers with no progress updates indicate owner needs help.
+
+7. **Escalate early**: If a HIGH barrier is open >1 week with no progress, escalate.
+
+8. **Capture learnings**: When resolved, document HOW and what you'd do differently next time.
+
+9. **Move resolved barriers**: When Status changes to "Resolved", move the entire entry to "## Resolved Barriers" section with strikethrough formatting and add "How Resolved" and "Duration" fields.

@@ -1,0 +1,88 @@
+# Stakeholders
+
+## Customer Stakeholders
+
+### [Name] - [Title]
+- **Organization**: [Customer Org]
+- **Contact**: [Email/Slack]
+- **Involvement Level**: [High/Medium/Low]
+- **Key Concerns**: [What keeps them up at night regarding this project?]
+- **Decision Authority**: [High/Medium/Low - What can they approve?]
+- **Champion/Skeptic/Neutral**: [Their stance on the project]
+- **Communication Style**: [How do they prefer to work? Formal/informal, detail/summary, etc.]
+- **Notes**: [Important context, preferences, background]
+
+### [Name] - [Title]
+- **Organization**: [Customer Org]
+- **Contact**: [Email/Slack]
+- **Involvement Level**: [High/Medium/Low]
+- **Key Concerns**: [Primary worries or focus areas]
+- **Decision Authority**: [What they control]
+- **Champion/Skeptic/Neutral**: [Their position]
+- **Communication Style**: [Preferences]
+- **Notes**: [Context]
+
+---
+
+## Salesforce Team
+
+### [Name] - [Title]
+- **Team**: [e.g., FDE, Account Team, SE]
+- **Contact**: [Email/Slack]
+- **Role in Engagement**: [What they're responsible for]
+- **Key Concerns**: [Their focus areas]
+- **Communication Style**: [How they work]
+- **Notes**: [Relevant background]
+
+### [Name] - [Title]
+- **Team**: [Team]
+- **Contact**: [Email/Slack]
+- **Role in Engagement**: [Responsibilities]
+- **Key Concerns**: [Focus]
+- **Communication Style**: [Preferences]
+- **Notes**: [Context]
+
+---
+
+## Partner/Vendor Contacts
+
+### [Name] - [Title]
+- **Organization**: [Partner Company]
+- **Contact**: [Email/Slack]
+- **Role**: [What they're doing]
+- **Key Concerns**: [Their priorities]
+- **Notes**: [Important context]
+
+---
+
+## Stakeholder Dynamics
+
+### Decision Making
+[Who approves what? What's the escalation path? Who has veto power?]
+
+### Communication Patterns
+[Who talks to whom? What channels? What frequency? Any communication challenges?]
+
+### Political Context
+[Any tensions, alliances, or dynamics to be aware of? Who influences whom?]
+
+---
+
+## Involvement Levels Guide
+
+- **High**: Daily/weekly interaction, key decision maker, critical to success
+- **Medium**: Regular check-ins, informed of major decisions, important but not critical
+- **Low**: Occasional updates, peripheral to project, awareness-level only
+
+---
+
+## Template for New Stakeholders
+
+When adding new stakeholders, include:
+- Name, role, organization (required)
+- Contact information (required)
+- Involvement level (required)
+- Key concerns (what matters to them)
+- Communication style (how they prefer to work)
+- Champion/Skeptic/Neutral (their stance)
+- Decision authority (what they can approve)

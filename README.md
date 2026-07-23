@@ -152,7 +152,7 @@ This is an internal FDE tool, evolved by whoever's using it. There's no formal r
 
 ## License
 
-MIT License, see [LICENSE](LICENSE).
+[MIT](LICENSE) © 2026 VurtuoLabs
 
 ## Tips
 

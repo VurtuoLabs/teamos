@@ -1,26 +1,26 @@
-# TeamOS (fdeOS) — Team Operating System
+# TeamOS (fdeOS), Team Operating System
 
 A Claude Code framework for Forward Deployed Engineers (FDEs) to manage multiple customer engagements: standardized tracking files, Slack/Google Drive auto-sync, and generated reports (weekly trackers, barrier reports, standup agendas), all driven through Claude Code skills rather than a separate app.
 
 ## Overview
 
-TeamOS (internally also called "fdeOS") solves a specific problem: FDEs juggle several customer engagements at once, each with its own stakeholders, blockers, and timeline, and leadership needs consistent, timely rollups across all of them. Instead of a database or web app, TeamOS keeps each engagement's state in a small set of structured Markdown files under `customers/[customer-name]/`, and uses Claude Code skills to read, update, and report on those files. There is no server, no build step, and no deployment — you clone/copy the folder and start running skills against it in Claude Code.
+TeamOS (internally also called "fdeOS") solves a specific problem: FDEs juggle several customer engagements at once, each with its own stakeholders, blockers, and timeline, and leadership needs consistent, timely rollups across all of them. Instead of a database or web app, TeamOS keeps each engagement's state in a small set of structured Markdown files under `customers/[customer-name]/`, and uses Claude Code skills to read, update, and report on those files. There is no server, no build step, and no deployment, you clone/copy the folder and start running skills against it in Claude Code.
 
 ## Listing Metadata
 
-- **Industries:** Cross-industry (internal use — Forward Deployed Engineering teams)
+- **Industries:** Cross-industry (internal use, Forward Deployed Engineering teams)
 - **Horizontal Product:** Productivity / Collaboration
-- **Business Need:** Standardized tracking and reporting across multiple customer engagements for FDEs — weekly trackers, barrier reports, standup agendas
+- **Business Need:** Standardized tracking and reporting across multiple customer engagements for FDEs, weekly trackers, barrier reports, standup agendas
 - **Requires:** Claude Code; optionally Google Drive and Slack for auto-sync
 - **Compatible With:** Google Drive, Slack
-- **Salesforce Editions:** Not applicable — not a Salesforce package; operates entirely via Markdown files and Claude Code skills
+- **Salesforce Editions:** Not applicable, not a Salesforce package; operates entirely via Markdown files and Claude Code skills
 
 **App Details**
 - Version: tracked via git history (no separate release versioning)
-- Package Contents: not applicable — no Salesforce metadata; Markdown + Claude Code skills only
+- Package Contents: not applicable, no Salesforce metadata; Markdown + Claude Code skills only
 - Languages: English
 
-**Security:** Not applicable — not listed on AppExchange.
+**Security:** Not applicable, not listed on AppExchange.
 
 ## Architecture
 
@@ -36,14 +36,14 @@ TeamOS/
 │   ├── weekly-update-account-team/ # Generates a Slack-ready weekly update
 │   └── standup/             # Generates a daily standup agenda from project state
 ├── templates/project/       # *.md.template files copied into new customer/ folders
-└── customers/                # Per-customer state (gitignored — see Configuration)
+└── customers/                # Per-customer state (gitignored, see Configuration)
     └── [customer-name]/
         ├── CLAUDE.md, AGENTS.md, STAKEHOLDERS.md, BARRIERS.md, LEARNINGS.md, TIMELINE.md
         ├── updates/, standups/, weekly-updates/
         └── agents/[workstream]/  (only for "complex" structure engagements)
 ```
 
-There is no separate persistence layer or database — **the Markdown tracking files under `customers/` are the memory.** Claude reads them at the start of a skill invocation and writes back to them at the end. Two structures are supported depending on engagement complexity (see [Choosing project structure](#choosing-project-structure)), and a project can migrate from simple to complex in place without losing data.
+There is no separate persistence layer or database, **the Markdown tracking files under `customers/` are the memory.** Claude reads them at the start of a skill invocation and writes back to them at the end. Two structures are supported depending on engagement complexity (see [Choosing project structure](#choosing-project-structure)), and a project can migrate from simple to complex in place without losing data.
 
 ## Features
 
@@ -55,8 +55,8 @@ There is no separate persistence layer or database — **the Markdown tracking f
 ## Prerequisites
 
 - [Claude Code](https://docs.claude.com/claude-code) CLI.
-- A global user profile at `~/.claude/memory/user_profile.md` (name, role, team, communication preferences) — TeamOS skills read this for personalization, but it isn't provisioned by this repo.
-- Access to whatever Google Drive folders and Slack channels a given customer engagement references (configured per-customer, not globally — see Configuration).
+- A global user profile at `~/.claude/memory/user_profile.md` (name, role, team, communication preferences), TeamOS skills read this for personalization, but it isn't provisioned by this repo.
+- Access to whatever Google Drive folders and Slack channels a given customer engagement references (configured per-customer, not globally, see Configuration).
 
 ## Installation / Setup
 
@@ -65,10 +65,10 @@ There is no separate persistence layer or database — **the Markdown tracking f
 cd ~/TeamOS   # or wherever you keep it
 
 # 2. One-time: set up your personal profile
-# Tell Claude: "set up my TeamOS profile" — it creates ~/.claude/memory/user_profile.md
+# Tell Claude: "set up my TeamOS profile", it creates ~/.claude/memory/user_profile.md
 ```
 
-There is no package manager, dependency install, or build step — TeamOS is a directory of Markdown templates and Claude Code skills, not a compiled or served application.
+There is no package manager, dependency install, or build step, TeamOS is a directory of Markdown templates and Claude Code skills, not a compiled or served application.
 
 ## Configuration
 
@@ -80,13 +80,13 @@ TeamOS has no global environment variables or secrets file. Configuration is per
 | Google Drive folder link | `customers/[name]/CLAUDE.md` | `/project-sync` |
 | Additional Slack channels | `customers/[name]/CLAUDE.md` | `/project-sync` |
 
-Google Drive and Slack access are provided through whatever MCP connectors/integrations are configured in your Claude Code environment — TeamOS itself does not manage authentication.
+Google Drive and Slack access are provided through whatever MCP connectors/integrations are configured in your Claude Code environment, TeamOS itself does not manage authentication.
 
 **Never commit `customers/`.** It's excluded via `.gitignore` (`customers/*/` with a `!customers/.gitkeep` exception to preserve the folder structure) precisely because it holds real customer engagement data. If you find yourself about to override that, stop and reconsider.
 
 ## Usage
 
-All usage is conversational, through Claude Code skills — there's no CLI binary to invoke directly.
+All usage is conversational, through Claude Code skills, there's no CLI binary to invoke directly.
 
 ```text
 "Set up a new project for Acme Corp"        → /project-setup
@@ -123,41 +123,41 @@ Start simple; `/new-agent-workstream` converts to complex automatically when nee
 
 See [Architecture](#architecture) for the top-level layout. Per-customer tracking files, in detail:
 
-- **CLAUDE.md** — strategic context: objectives, constraints, key decisions, workflows, M120 channel
-- **AGENTS.md** — agent metadata for tracker submissions: types, phases, status, go-live dates, sentiment, implementation partners
-- **STAKEHOLDERS.md** — who's involved, communication styles, concerns, decision authority
-- **BARRIERS.md** — blockers organized by product area, with impact and next steps
-- **LEARNINGS.md** — successes ✅, challenges ⚠️, patterns 💡, retrospectives 🔄
-- **TIMELINE.md** — week-by-week narrative, not just a date list
-- **updates/**, **standups/**, **weekly-updates/** — generated/dated output, not hand-authored
+- **CLAUDE.md**, strategic context: objectives, constraints, key decisions, workflows, M120 channel
+- **AGENTS.md**, agent metadata for tracker submissions: types, phases, status, go-live dates, sentiment, implementation partners
+- **STAKEHOLDERS.md**, who's involved, communication styles, concerns, decision authority
+- **BARRIERS.md**, blockers organized by product area, with impact and next steps
+- **LEARNINGS.md**, successes ✅, challenges ⚠️, patterns 💡, retrospectives 🔄
+- **TIMELINE.md**, week-by-week narrative, not just a date list
+- **updates/**, **standups/**, **weekly-updates/**, generated/dated output, not hand-authored
 
 ## Testing
 
-There is no automated test suite. TeamOS is a set of Markdown templates and Claude Code skill prompts, not executable application code — correctness is verified by running each skill against a real or sample customer folder and reviewing the generated output.
+There is no automated test suite. TeamOS is a set of Markdown templates and Claude Code skill prompts, not executable application code, correctness is verified by running each skill against a real or sample customer folder and reviewing the generated output.
 
 ## Deployment
 
-Not applicable in the traditional sense — there's nothing to build or deploy. "Deploying" TeamOS to a new machine or teammate means copying the framework (see [Sharing TeamOS](#sharing-teamos)) and running the one-time profile setup.
+Not applicable in the traditional sense, there's nothing to build or deploy. "Deploying" TeamOS to a new machine or teammate means copying the framework (see [Sharing TeamOS](#sharing-teamos)) and running the one-time profile setup.
 
 ## Sharing TeamOS
 
-✅ Share: the framework itself — skills, templates, documentation.
+✅ Share: the framework itself, skills, templates, documentation.
 ❌ Don't share: your `~/.claude/memory/` (personal profile) or your `customers/` folder (real engagement data).
 
 Each person who adopts TeamOS keeps their own profile and their own `customers/` folder; only the framework (skills + templates) is common.
 
 ## Contributing
 
-This is an internal FDE tool, evolved by whoever's using it. There's no formal review process — customize templates for your engagement types, add skills for workflows you find yourself repeating, and adjust the simple/complex structures to match your team's needs. If you change a skill's behavior in a way that affects shared customers/ file formats, update the corresponding `templates/project/*.md.template` to match.
+This is an internal FDE tool, evolved by whoever's using it. There's no formal review process, customize templates for your engagement types, add skills for workflows you find yourself repeating, and adjust the simple/complex structures to match your team's needs. If you change a skill's behavior in a way that affects shared customers/ file formats, update the corresponding `templates/project/*.md.template` to match.
 
 ## License
 
-MIT License — see [LICENSE](LICENSE).
+MIT License, see [LICENSE](LICENSE).
 
 ## Tips
 
-1. Sync regularly — weekly at minimum, ideally after major meetings.
+1. Sync regularly, weekly at minimum, ideally after major meetings.
 2. Keep `BARRIERS.md` current as blockers resolve; stale barriers make leadership reports misleading.
 3. Capture learnings as decisions happen, not in retrospect.
 4. Let auto-sync update files, then review the change log rather than editing tracking files by hand.
-5. Generate reports often — leadership prefers frequent, timely updates over comprehensive-but-late ones.
+5. Generate reports often, leadership prefers frequent, timely updates over comprehensive-but-late ones.

@@ -11,7 +11,7 @@ This file tracks agent-level metadata for FDE engagement weekly tracker submissi
 ## Account Information
 
 **Primary Slack Channel:**
-<!-- REQUIRED: The customer's main Slack channel for this engagement — whichever channel the customer wants used for updates and syncs. -->
+<!-- REQUIRED: The customer's main Slack channel for this engagement, whichever channel the customer wants used for updates and syncs. -->
 <!-- Format: Channel ID (e.g., C0AF28B0Z6V) or channel name (e.g., #customer-name-account-team) -->
 <!-- Example: C0AF28B0Z6V or #nuffield-health-account-team -->
 
